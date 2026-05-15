@@ -20,6 +20,7 @@ contract BigBank is Bank {
     }
 
     function _deposit(address user, uint256 amount) internal override minDeposit(amount) {
+        // 调用父合约的 _deposit 方法
         super._deposit(user, amount);
     }
 
