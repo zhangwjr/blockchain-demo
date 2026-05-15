@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 contract Bank {
-    address public immutable admin;
+    address public  admin;
 
     // 记录每个地址的累计存款金额
     mapping(address => uint256) public balances; 
@@ -28,8 +28,12 @@ contract Bank {
     }
 
     // 可选：显式调用存款方法
-    function deposit() external payable {
+    function deposit() external payable  {
         _deposit(msg.sender, msg.value);
+    }
+
+    function balance(address addr) public view  returns (uint){
+        return addr.balance;
     }
 
     // 仅管理员可提取合约资金
@@ -56,7 +60,7 @@ contract Bank {
         }
     }
 
-    function _deposit(address user, uint256 amount) internal {
+    function _deposit(address user, uint256 amount) internal virtual  {
         require(amount > 0, "Amount must be > 0");
 
         balances[user] += amount;
