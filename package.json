@@ -1,0 +1,23 @@
+{
+  "name": "blockchain-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blockchain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangwjr/blockchain-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangwjr/blockchain-demo/issues"
+  },
+  "homepage": "https://github.com/zhangwjr/blockchain-demo#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.6.1"
+  }
+}
