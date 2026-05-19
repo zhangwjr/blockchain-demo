@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
-import "./BaseERC20.sol";
+import "./MyToken.sol";
 
 contract TokenBank {
-    BaseERC20 public token;
+    MyToken public token;
 
     mapping(address => uint256) public deposits;
 
@@ -13,7 +13,7 @@ contract TokenBank {
 
     constructor(address tokenAddress) {
         require(tokenAddress != address(0), "Invalid token address");
-        token = BaseERC20(tokenAddress);
+        token = MyToken(tokenAddress);
     }
 
     function deposit() external {
